@@ -1,0 +1,66 @@
+body
+{
+    background-image: url("img/nuage.jpg");
+}
+.page2 {
+    height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.img {
+  display: flex;
+}
+.temp {
+  display: flex;
+  flex-direction: column;
+}
+.none {
+  display: none;
+}
+.page1 {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.btn
+{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    background-color: #87CEEB; /* Couleur bleu clair pour évoquer la météo */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.btn:hover
+{
+    background-color: #4682B4;
+}
+
+input[type="text"] {
+    background-color: #e0f7fa; /* Bleu clair, couleur inspirée par le ciel */
+    border: 1px solid #4fc3f7; /* Bordure bleu plus foncé pour contraster */
+    border-radius: 4px; /* Coins arrondis */
+    padding: 10px; /* Espacement intérieur */
+    font-size: 16px; /* Taille de la police */
+    color: #000; /* Couleur du texte en noir pour le contraste */
+    outline: none; /* Supprime le contour par défaut lors de la sélection */
+    transition: background-color 0.3s ease; /* Effet de transition pour les changements de couleur */
+  }
+  
+  input[type="text"]:focus {
+    background-color: #b2ebf2; /* Couleur plus foncée lors de la mise au point */
+    border-color: #0288d1; /* Bordure plus foncée lors de la mise au point */
+  }
+  

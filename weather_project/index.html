@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+     
+        <div class="page1" v-if="this.page1 == true">
+          <h1>Météo</h1>
+          <form name="form">
+            <input type="text" name="town" placeholder="ville" />
+            <input type="text" name="code" placeholder="code" />
+          </form>
+
+          <input type="submit" class="btn" @click="location"/>
+        </div>
+
+        <div class="page2" v-if="this.page2 == true">
+          <h1>Météo</h1>
+          <h2>{{this.infos.name}} ({{ this.infos.sys.country }})</h2>
+          <div class="img">
+            <img :src="this.img" alt="img" />
+            <div class="temp">
+              <p>{{this.temp}}°C</p>
+              <p>{{this.tempFeel}}°C Ressenti</p>
+            </div>
+          </div>
+
+          <p>Condition: {{this.desc}}</p>
+          <p>Vent: {{this.gust}}km/h du {{this.direc}}</p>
+          <p>Levées du soleil: {{this.hours}}h{{this.minutes}}</p>
+          <p>Coucher du soleil: {{this.hoursSet}}h{{this.minutesSet}}</p>
+          <p>Fuseau horaire: {{ this.time }}h</p>
+          <p class="none" v-if="this.rainy == undefined"></p>
+          <p v-else>Precipitation de pluie: {{ this.rainy }}mm</p>
+          <p class="none" v-if="this.snow == undefined"></p>
+          <p v-else>Chute de neige: {{ this.snow }}mm</p>
+          <a href="#" class="btn" @click="this.return()">Back</a>
+        </div>
+     
+    </div>
+   
+   
+    <script type="module" src="app.js"></script>
+   
+    </script>
+  </body>
+</html>
